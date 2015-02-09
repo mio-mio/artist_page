@@ -26,6 +26,7 @@ body {
   background-color: rgba(255,255,255,0.75);
 }
 
+
 section {
   overflow: auto;
 }
@@ -42,10 +43,9 @@ textarea {
   margin-bottom: 10px;
 }
 
-/* topページのフォント 適応できていない。*/
-#home_font {
+/* topページのフォント */
+h1#home_font {
   color: white;
-  font-size: 12em;
   font-weight: bold;
   text-transform: uppercase;
 }
