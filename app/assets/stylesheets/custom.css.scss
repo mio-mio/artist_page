@@ -10,6 +10,21 @@ body {
   padding-top: 60px;
 }
 
+.container-fluid > .sidebar {
+  float: left;
+  width: 220px;
+}
+.container-fluid > .content {
+  float: left;
+  min-width: 700px;
+  max-width: 1180px;
+  margin-left: 20px;
+}
+
+.container_bg {
+  background-color: rgba(255,0,0,0.15);
+}
+
 section {
   overflow: auto;
 }
@@ -24,4 +39,49 @@ textarea {
 
 .center h1 {
   margin-bottom: 10px;
+}
+
+/* bg image */
+
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  /* Set up positioning */
+  position: fixed;
+  /* またはabsolute; */
+  top: 0;
+  left: 0;
+}
+
+@media screen and (max-width: 1024px){
+  img.bg {
+  left: 50%;
+  margin-left: -512px; }
+}
+
+div#container {
+  position: relative; 
+}
+
+/* header */
+
+#logo {
+  font-family: 'Dancing Script', cursive; /*　できてない。　*/
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
 }
