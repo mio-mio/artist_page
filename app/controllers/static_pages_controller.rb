@@ -14,9 +14,6 @@ class StaticPagesController < ApplicationController
   def shows
   end
 
-  def blog
-  end
-
   def contact
   end
 end
