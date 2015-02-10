@@ -1,0 +1,33 @@
+<% provide(:title, 'Contact Form') %>
+
+
+<div class="container container_bg">
+ <div class="container_inside">
+
+<h1>Contact</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@contact) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :name %> 
+      <%= f.text_field :name %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :content %>
+      <%= f.text_area :content %>
+      <br>
+
+      <%= f.submit "Submit", class: "btn btn-large btn-primary" %>
+    <% end %>
+    <br>
+    <div align="right">
+    Everything is required.
+    </div>
+  </div>
+</div>
+</div>
+</div>
