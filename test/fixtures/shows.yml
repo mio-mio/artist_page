@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  official_title: MyText
+  offical_url: MyString
+  img_url: MyString
+  sponser: MyString
+  sponser_url: MyString
+  broadcasting_station: MyString
+  broadcasting_period: MyString
+  youtube_id: MyString
+
+two:
+  title: MyString
+  official_title: MyText
+  offical_url: MyString
+  img_url: MyString
+  sponser: MyString
+  sponser_url: MyString
+  broadcasting_station: MyString
+  broadcasting_period: MyString
+  youtube_id: MyString

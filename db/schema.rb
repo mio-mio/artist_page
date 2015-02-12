@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150210095046) do
+ActiveRecord::Schema.define(version: 20150212043033) do
 
   create_table "contacts", force: true do |t|
     t.string   "name"
@@ -23,8 +23,14 @@ ActiveRecord::Schema.define(version: 20150210095046) do
 
   create_table "shows", force: true do |t|
     t.string   "title"
-    t.string   "detail"
-    t.string   "image_url"
+    t.text     "official_title"
+    t.string   "offical_url"
+    t.string   "img_url"
+    t.string   "sponser"
+    t.string   "sponser_url"
+    t.string   "broadcasting_station"
+    t.string   "broadcasting_period"
+    t.string   "youtube_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

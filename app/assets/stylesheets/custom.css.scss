@@ -32,9 +32,16 @@ body {
 .container > .container_inside {
   padding: 20px;
 }
+
 .content > .container_inside_right {
   padding: 20px;
 }
+
+.content > .container_inside_right > .img { //効いてない
+  width: 400px;
+  margin: 20px;
+}
+
 section {
   overflow: auto;
 }

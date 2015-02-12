@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   
+  resources :shows
+
   resources :contacts, only: [:new, :create]
-  resources :shows, only: [:show]
+#  resources :shows, only: [:show]
 
   get 'contacts/new'
   get 'shows/show'
