@@ -1,50 +1,14 @@
 <% provide(:title, 'Shows') %>
-<!--
-
-1番組ずつドロップダウンで選択し、詳細を表示させるようにする。
-            <%# @shows.each do |show| %>
-          <li><%#= link_to show.title %></li>
-            <%# end %>
-クリックで、
-<%#= link_to 'Show', show %>
-
--->
-  
 <div class="container-fluid">
  <div class="sidebar container_bg">
-
-   <div class="btn-group">
-     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-        Choose a show <span class="caret"></span>
-     </button>
-     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-            
-        <li class="dropdown-header">Radio Shows</li>
-        <li><a tabindex="-1" href="shows/1">Mana*Mio In Radio!</a></li>
-        <li><a tabindex="-1" href="shows/2">The Future Times(R) of Kawasaki Family</a></li>
-        <li class="divider"></li>
-        <li class="dropdown-header">Web Shows</li>
-        <li><a tabindex="-1" href="shows/3">Mirai Au Lait</a></li>
-        <li><a tabindex="-1" href="shows/4">Enjoy Mooma Tonight, too!</a></li>
-        <li class="divider"></li>
-        <li class="dropdown-header">Other Shows and Gigs</li>
-        <li><a href="shows/5">Gal-loween</a></li>
-        <li><a href="shows/6">Kawasaki City Events and Web Shows</a></li>
-<!--
-        <li><a href="shows/7">Niiza Jazz in Saitama</a></li>
--->
-     </ul>
-    </div>
-<!--
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
- -->
- 
+     
+  <%= render 'shows/sidebar' %>
+  
  </div>
  <div class="content container_bg">
  <div class="container_inside_right">
   <h2>
-   Choose the title from sidebar.
+   Choose a show title from sidebar.
   </h2>
   </div>
 </div>

@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   
+  resources :songs
+
   resources :shows
 
   resources :contacts, only: [:new, :create]
-#  resources :shows, only: [:show]
-
+  
   get 'contacts/new'
-  get 'shows/show'
-
+  
   root  'static_pages#home'
   match '/biography',    to: 'static_pages#biography',    via: 'get'
   match '/discography',   to: 'static_pages#discography',   via: 'get'

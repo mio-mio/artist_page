@@ -10,6 +10,11 @@ body {
   background: url(/assets/MiraiP1024.jpg) center center / cover no-repeat fixed;
   padding-top: 60px;
 }
+  @font-face {
+    font-family: Palatino Linotype, Sylfaen, Book Antiqua; //だめですな…
+    font-weight:normal;
+  }
+  
 
 .container-fluid > .sidebar {
   float: left;
@@ -25,7 +30,7 @@ body {
 
 .container_bg {
   background-color: rgba(255,255,255,0.75);
-  padding-bottom: 100px;
+  padding: 20px 20px 100px 20px;
 }
 
 
@@ -37,10 +42,6 @@ body {
   padding: 20px;
 }
 
-.content > .container_inside_right > .img { //効いてない
-  width: 400px;
-  margin: 20px;
-}
 
 section {
   overflow: auto;
@@ -63,26 +64,31 @@ h1#home_font {
   color: white;
   font-weight: bold;
   text-transform: uppercase;
+  font-family: Palatino Linotype;
+  font-size: 5em;
+  line-height: 1;
 }
+
+
 
 /* header */
 
-#logo {
-  font-family: 'Dancing Script', cursive; /* できてない。　*/
+a#logo {
+
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
+  font-size: 3em;
   color: #fff;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
+  font-family: Palatino Linotype;
 }
 
-#logo:hover {
-  color: #fff;
-  text-decoration: none;
-}
+//#logo:hover {
+//  color: #fff;
+//}
 
 /* youtube */
 .YoutubeWrapper{

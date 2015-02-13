@@ -1,0 +1,64 @@
+<% provide(:title, 'Songs') %>
+
+<div class="container-fluid">
+ <div class="sidebar container_bg">
+
+  <%= render 'songs/sidebar' %>
+
+ </div>
+
+ <div class="content container_bg">
+ <div class="container_inside_right">
+
+<p>
+  <h2>
+  <%= @song.title %>
+  </h2>
+</p>
+<p id="notice"><%= notice %></p>
+
+
+
+ <div class="container_inside_right">
+  <div class="span4<div video-wrap">
+    
+<iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @song.youtube_id %>" frameborder="0" allowfullscreen></iframe>
+ </div>
+ 
+  <div class="span4">
+<p>
+  <strong>Music:</strong>
+  <%= link_to @song.music, @song.music_url, :target=>["_blank"] %>
+</p>
+
+<p>
+  <strong>Lyrics:</strong>
+  <%= @song.lyrics %>
+</p>
+
+<p>
+  <strong>Singer:</strong>
+  <%= @song.singer %>
+</p>
+
+<p>
+  <strong>Illustration:</strong>
+  <%= @song.illustration %>
+</p>
+
+<p>
+  <strong>Director:</strong>
+  <%= @song.pv_director %>
+</p>
+
+
+
+<p>
+  <strong>This song is sold on <%= link_to 'itunes', @song.itunes_url , :target=>["_blank"] %></strong>
+</p>
+
+<%#= link_to 'Edit', edit_song_path(@song) %> 
+<%#= link_to 'Back', songs_path %>
+
+  </div>
+</div>

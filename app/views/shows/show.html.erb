@@ -1,54 +1,27 @@
 <% provide(:title, 'Shows') %>
 <div class="container-fluid">
  <div class="sidebar container_bg">
-
-   <div class="btn-group">
-     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-        Choose a show <span class="caret"></span>
-     </button>
-     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-            
-        <li class="dropdown-header">Radio Shows</li>
-        <li><a tabindex="-1" href="1">Mana*Mio In Radio!</a></li>
-        <li><a tabindex="-1" href="2">The Future Times(R) of Kawasaki Family</a></li>
-        <li class="divider"></li>
-        <li class="dropdown-header">Web Shows</li>
-        <li><a tabindex="-1" href="3">Mirai Au Lait</a></li>
-        <li><a tabindex="-1" href="4">Enjoy Mooma Tonight, too!</a></li>
-        <li class="divider"></li>
-        <li class="dropdown-header">Other Shows and Gigs</li>
-        <li><a href="5">Gal-loween</a></li>
-        <li><a href="6">Kawasaki City Events and Web Shows</a></li>
-<!--
-        <li><a href="shows/7">Niiza Jazz in Saitama</a></li>
--->
-     </ul>
-    </div>
-    
-<!--
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
- -->
- 
+     
+  <%= render 'shows/sidebar' %>
+  
  </div>
  <div class="content container_bg">
  <div class="container_inside_right">
 
-<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
 
 <p>
   <h2>
     <%= @show.title %>
   </h2>
 </p>
-<table>
- <tbody>
-  <tr>
-    <div class="img">
+    </div>
+
+ <div class="container_inside_right">
+  <div class="span4">
          <%= image_tag @show.img_url %>
-         </div>
-  </tr>
-  <tr>
+  </div>
+  <div class="span4">
 <p>
   <strong>Official title:</strong>
   <%= @show.official_title %>
@@ -56,12 +29,12 @@
 
 <p>
   <strong>Offical webpage:</strong>
-  <%= link_to @show.offical_url, @show.offical_url %>
+  <%= link_to @show.offical_url, @show.offical_url , :target=>["_blank"]%>
 </p>
 
 <p>
   <strong>Sponser:</strong> <!--nullのときにhiddenしたい！ -->
-  <%= link_to  @show.sponser, @show.sponser_url %>
+  <%= link_to  @show.sponser, @show.sponser_url, :target=>["_blank"] %>
 
 <p>
   <strong>Broadcasting station:</strong>
@@ -77,10 +50,7 @@
   <strong>Youtube:</strong>
   <%= @show.youtube_id %>
 </p> 
-    
-  </tr>
- </tbody>
-</table>  
-
+  </div>
+</div>    
   </div>
 </div>
