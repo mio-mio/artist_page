@@ -22,7 +22,11 @@
  <div class="container_inside_right">
   <div class="span4<div video-wrap">
     
-<iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @song.youtube_id %>" frameborder="0" allowfullscreen></iframe>
+<p>
+  <% if @song.youtube_id? %>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @song.youtube_id %>" frameborder="0" allowfullscreen></iframe>
+  <% end %>
+ </p>
  </div>
  
   <div class="span4">
@@ -42,23 +46,25 @@
 </p>
 
 <p>
+  <% if @song.illustration? %>
   <strong>Illustration:</strong>
   <%= @song.illustration %>
+  <% end %>
 </p>
 
 <p>
+  <% if @song.pv_director? %>
   <strong>Director:</strong>
   <%= @song.pv_director %>
+  <% end %>
 </p>
-
-
 
 <p>
+  <% if @song.itunes_url? %>
   <strong>This song is sold on <%= link_to 'itunes', @song.itunes_url , :target=>["_blank"] %></strong>
-</p>
+  <% end %>
 
-<%#= link_to 'Edit', edit_song_path(@song) %> 
-<%#= link_to 'Back', songs_path %>
+</p>
 
   </div>
 </div>

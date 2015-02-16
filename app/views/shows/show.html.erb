@@ -1,9 +1,9 @@
 <% provide(:title, 'Shows') %>
 <div class="container-fluid">
  <div class="sidebar container_bg">
-     
+
   <%= render 'shows/sidebar' %>
-  
+
  </div>
  <div class="content container_bg">
  <div class="container_inside_right">
@@ -19,7 +19,8 @@
 
  <div class="container_inside_right">
   <div class="span4">
-         <%= image_tag @show.img_url %>
+      
+         <%= image_tag @show.img_url if @show.img_url %>
   </div>
   <div class="span4">
 <p>
@@ -28,29 +29,45 @@
 </p>
 
 <p>
-  <strong>Offical webpage:</strong>
+  <% if @show.offical_url? %>
+  <strong>Offical webpage:  </strong>
   <%= link_to @show.offical_url, @show.offical_url , :target=>["_blank"]%>
+  <% end %>
 </p>
 
 <p>
-  <strong>Sponser:</strong> <!--nullのときにhiddenしたい！ -->
-  <%= link_to  @show.sponser, @show.sponser_url, :target=>["_blank"] %>
+  <% if @show.sponser_url? %>
+  <strong>Sponser:  </strong>
+  <%= link_to @show.sponser, @show.sponser_url, :target=>["_blank"]%>
+  <% end %>
+</p>
 
 <p>
-  <strong>Broadcasting station:</strong>
+  <% if @show.broadcasting_station? %>
+ <strong>Broadcasting station:</strong>
   <%= @show.broadcasting_station %>
+  <% end %>
 </p>
 
+
 <p>
-  <strong>Broadcasting period:</strong>
+  <% if @show.broadcasting_period? %>
+ <strong>Broadcasting period:</strong>
   <%= @show.broadcasting_period %>
+  <% end %>
+</p>
+  </div>
+
+<div class="YoutubeWrapper span8">
+<p>
+  <% if @show.youtube_id? %>
+  <strong>Youtube:</strong>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @show.youtube_id %>" frameborder="0" allowfullscreen></iframe>
+  <% end %>
 </p>
 
-<p>
-  <strong>Youtube:</strong>
-  <%= @show.youtube_id %>
-</p> 
-  </div>
-</div>    
+
+</div>
+</div>
   </div>
 </div>
