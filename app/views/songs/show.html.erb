@@ -1,21 +1,22 @@
 <% provide(:title, 'Songs') %>
 
-<div class="container-fluid">
- <div class="sidebar container_bg">
 
+<div class="container">
+ <div class="row-fluid">
+ <div class="sidebar container_bg span3">
   <%= render 'songs/sidebar' %>
-
  </div>
-
- <div class="content container_bg">
- <div class="container_inside_right">
+ 
+ <div class="content container_bg span9">
+   
+   
 
 <p>
   <h2>
   <%= @song.title %>
   </h2>
 </p>
-<p id="notice"><%= notice %></p>
+<!--<p id="notice"><%#= notice %></p> -->
 
 
 
@@ -68,3 +69,7 @@
 
   </div>
 </div>
+
+  </div>
+</div>
+</div>  

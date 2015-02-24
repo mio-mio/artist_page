@@ -1,24 +1,18 @@
 <% provide(:title, 'Shows') %>
-<div class="container-fluid">
- <div class="sidebar container_bg">
-
+<div class="container">
+ <div class="row-fluid">
+ <div class="sidebar container_bg span3">
   <%= render 'shows/sidebar' %>
-
  </div>
- <div class="content container_bg">
- <div class="container_inside_right">
-
-  <p id="notice"><%= notice %></p>
-
+ 
+ <div class="content container_bg span9">
 <p>
   <h2>
     <%= @show.title %>
   </h2>
 </p>
-    </div>
 
- <div class="container_inside_right">
-  <div class="span4">
+  <div class="span4" style="margin : 10px">
       
          <%= image_tag @show.img_url if @show.img_url %>
   </div>
@@ -58,16 +52,14 @@
 </p>
   </div>
 
+
 <div class="YoutubeWrapper span8">
 <p>
   <% if @show.youtube_id? %>
-  <strong>Youtube:</strong>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @show.youtube_id %>" frameborder="0" allowfullscreen></iframe>
   <% end %>
 </p>
 
-
-</div>
-</div>
   </div>
 </div>
+</div>  

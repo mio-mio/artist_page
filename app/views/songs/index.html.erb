@@ -1,62 +1,15 @@
 <% provide(:title, 'Songs') %>
-  
-<div class="container-fluid">
- <div class="sidebar container_bg">
-
+<div class="container">
+ <div class="row-fluid">
+ <div class="sidebar container_bg span3">
   <%= render 'songs/sidebar' %>
-  
  </div>
- <div class="content container_bg">
- <div class="container_inside_right">
+ 
+ <div class="content container_bg span9">
   <h2>
    Choose a song title from sidebar.
   </h2>
+
   </div>
 </div>
-</div>
-<!--
-
-
-
-<h1>Listing songs</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Music</th>
-      <th>Music url</th>
-      <th>Lyrics</th>
-      <th>Singer</th>
-      <th>Illustration</th>
-      <th>Pv director</th>
-      <th>Youtube</th>
-      <th>Itunes url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <%# @songs.each do |song| %>
-      <tr>
-        <td><%#= song.title %></td>
-        <td><%#= song.music %></td>
-        <td><%#= song.music_url %></td>
-        <td><%#= song.lyrics %></td>
-        <td><%#= song.singer %></td>
-        <td><%#= song.illustration %></td>
-        <td><%#= song.pv_director %></td>
-        <td><%#= song.youtube_id %></td>
-        <td><%#= song.itunes_url %></td>
-        <td><%#= link_to 'Show', song %></td>
-        <td><%#= link_to 'Edit', edit_song_path(song) %></td>
-        <td><%#= link_to 'Destroy', song, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <%# end %>
-  </tbody>
-</table>
-
-<br>
-
-<%#= link_to 'New Song', new_song_path %>
--->
+</div>  

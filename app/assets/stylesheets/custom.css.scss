@@ -8,39 +8,43 @@ html {
 
 body {
   background: url(/assets/MiraiP1024.jpg) center center / cover no-repeat fixed;
-  padding-top: 60px;
-}
+  padding: 60px 0 120px 0;
   @font-face {
     font-family: Palatino Linotype, Sylfaen, Book Antiqua; //だめですな…
     font-weight:normal;
   }
+}
   
 
+.img-responsive { //だめですな…
+  display: block;
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+  
+  
 .container-fluid > .sidebar {
   float: left;
-  width: 220px;
-  padding: 20px;
 }
 .container-fluid > .content {
   float: left;
-  min-width: 700px;
-  max-width: 1180px;
   margin-left: 20px;
 }
 
 .container_bg {
   background-color: rgba(255,255,255,0.75);
-  padding: 20px 20px 100px 20px;
+  padding: 40px 40px 120px 40px;
 }
 
 
-.container > .container_inside {
-  padding: 20px;
-}
+//.container > .container_inside {//
+//  padding: 20px;
+//}
 
-.content > .container_inside_right {
-  padding: 20px;
-}
+//.content > .container_inside_right {
+//  padding: 20px;
+//}
 
 
 section {
@@ -73,23 +77,110 @@ h1#home_font {
 
 /* header */
 
-a#logo {
+#logo {
 
   float: left;
   margin-right: 10px;
   font-size: 3em;
   color: #fff;
   letter-spacing: -1px;
-  padding-top: 9px;
+  padding-top: 15px;
   font-weight: bold;
   line-height: 1;
   font-family: Palatino Linotype;
 }
+#logo li a:hover{
+  background: #444;
+  text-decoration: none;
+}
 
-//#logo:hover {
-//  color: #fff;
-//}
+#menu{
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0;
+}
+#menu li{
+  display: block;
+  float: left;
+  width: 15%;
+  margin: 0;
+  padding: 0; }
+#menu li a{
+  display: block;
+  padding: 12px 0 10px;
+  background: transparent;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+#menu li a:hover{
+  background: #444;
+}
+#menu li#fb{
+  padding: 10px;
+}
 
+#toggle{ 
+ display: none;
+}
+@media only screen and (max-width: 1200px) {
+    #menu li{
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #menu{
+    display: none;
+  }
+  #menu li{
+    width: 100%;
+  }
+  #toggle{
+    display: block;
+    position: relative;
+    width: 100%;
+    background: #222;
+  }
+  #toggle a{
+    display: block;
+    position: relative;
+    padding: 12px 0 10px;
+    border-bottom: 1px solid #444;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+  }
+  #toggle:before{
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    background: #fff;
+  }
+  #toggle a:before, #toggle a:after{
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 20px;
+    height: 4px;
+    background: #222;
+  }
+  #toggle a:before{
+    margin-top: -6px;
+  }
+  #toggle a:after{
+    margin-top: 2px;
+  }
+}
+    
+    
 /* youtube */
 .YoutubeWrapper{
 　position: relative ;
@@ -106,4 +197,10 @@ a#logo {
 　left: 0 ;
 　height: 100% ;
 　width: 100% ;
+}
+
+img{
+max-width: 100%;
+height: auto;
+width: auto;
 }
