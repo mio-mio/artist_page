@@ -7,6 +7,7 @@ class ContactMailer < ActionMailer::Base
   #   en.contact_mailer.sent.subject
   #
   def sent(contact)
+
     @contact = contact
 
     mail(to: @contact.email, subject: "Thank you for your contact!")

@@ -18,7 +18,7 @@ config.action_mailer.raise_delivery_errors = true
 config.action_mailer.default_url_options = { :host => 'http://artist-page-miohimemiya.c9.io', :port => 8080 }
 config.action_mailer.delivery_method = :smtp
 config.action_mailer.smtp_settings = {
-  :address => 'mooma-web.sakura.ne.jp',
+  :address => 'smtp.gmail.com',
   :port => 587,
   :domain => 'c9.io',
   :user_name => ENV['SMTP_MAIL'],

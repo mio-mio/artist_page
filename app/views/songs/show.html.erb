@@ -3,25 +3,23 @@
 
 <div class="container">
  <div class="row-fluid">
- <div class="sidebar container_bg span3">
+ <div class="sidebar container_bg span3 img-rounded">
   <%= render 'songs/sidebar' %>
  </div>
  
- <div class="content container_bg span9">
+ <div class="content container_bg span9 img-rounded">
    
-   
-
 <p>
-  <h2>
+  <h1>
   <%= @song.title %>
-  </h2>
+  </h1>
 </p>
 <!--<p id="notice"><%#= notice %></p> -->
 
 
-
- <div class="container_inside_right">
-  <div class="span4<div video-wrap">
+  <div class="span4" style="margin : 10px"> <!-- youtube だから効いてない　-->
+ <!--div class="container_inside_right">
+  <div class="span4 video-wrap"-->
     
 <p>
   <% if @song.youtube_id? %>

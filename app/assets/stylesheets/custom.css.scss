@@ -1,3 +1,4 @@
+//@import "bootstrap-sprockets";
 @import "bootstrap";
 
 /* universal */
@@ -15,15 +16,6 @@ body {
   }
 }
   
-
-.img-responsive { //だめですな…
-  display: block;
-  height: auto;
-  max-width: 100%;
-  margin-bottom: 20px;
-}
-  
-  
 .container-fluid > .sidebar {
   float: left;
 }
@@ -36,16 +28,6 @@ body {
   background-color: rgba(255,255,255,0.75);
   padding: 40px 40px 120px 40px;
 }
-
-
-//.container > .container_inside {//
-//  padding: 20px;
-//}
-
-//.content > .container_inside_right {
-//  padding: 20px;
-//}
-
 
 section {
   overflow: auto;
@@ -73,11 +55,15 @@ h1#home_font {
   line-height: 1;
 }
 
+/* topページのyoutube */
+.homeyoutube {
+  margin: 0;
+}
 
 
 /* header */
 
-#logo {
+a#logo {
 
   float: left;
   margin-right: 10px;
@@ -88,10 +74,8 @@ h1#home_font {
   font-weight: bold;
   line-height: 1;
   font-family: Palatino Linotype;
-}
-#logo li a:hover{
-  background: #444;
   text-decoration: none;
+  display: block;
 }
 
 #menu{
@@ -124,12 +108,19 @@ h1#home_font {
 #toggle{ 
  display: none;
 }
-@media only screen and (max-width: 1200px) {
+/*@media only screen and (max-width: 1200px) {
     #menu li{
     width: 30%;
   }
-}
-@media only screen and (max-width: 480px) {
+*/  
+    /* topページのフォント */
+/*h1 {
+  font-size: 200%;
+  }
+
+}*/
+
+/*@media only screen and (max-width: 480px) {
   #menu{
     display: none;
   }
@@ -179,28 +170,24 @@ h1#home_font {
     margin-top: 2px;
   }
 }
-    
+
+*/    
     
 /* youtube */
-.YoutubeWrapper{
-　position: relative ;
-　margin-top: 1.2em ;
-　margin-bottom: 1.2em ;
-　padding-top: 69px ;
-　padding-bottom: 50% ;
-　overflow: hidden ;
+/*
+.video-wrap {
+  position: relative;
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+  padding-top: 69px;
+  padding-bottom: 50%;
+  overflow: hidden;
 }
- 
-.YoutubeWrapper iframe {
-　position: absolute ;
-　top: 0 ;
-　left: 0 ;
-　height: 100% ;
-　width: 100% ;
+.video-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
-
-img{
-max-width: 100%;
-height: auto;
-width: auto;
-}
+*/
