@@ -1,73 +1,14 @@
 <% provide(:title, 'Songs') %>
 
-
-<div class="container">
- <div class="row-fluid">
- <div class="sidebar container_bg span3 img-rounded">
-  <%= render 'songs/sidebar' %>
- </div>
- 
- <div class="content container_bg span9 img-rounded">
-   
-<p>
-  <h1>
-  <%= @song.title %>
-  </h1>
-</p>
-<!--<p id="notice"><%#= notice %></p> -->
-
-
-  <div class="span4" style="margin : 10px"> <!-- youtube だから効いてない　-->
- <!--div class="container_inside_right">
-  <div class="span4 video-wrap"-->
-    
-<p>
-  <% if @song.youtube_id? %>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @song.youtube_id %>" frameborder="0" allowfullscreen></iframe>
-  <% end %>
- </p>
- </div>
- 
-  <div class="span4">
-<p>
-  <strong>Music:</strong>
-  <%= link_to @song.music, @song.music_url, :target=>["_blank"] %>
-</p>
-
-<p>
-  <strong>Lyrics:</strong>
-  <%= @song.lyrics %>
-</p>
-
-<p>
-  <strong>Singer:</strong>
-  <%= @song.singer %>
-</p>
-
-<p>
-  <% if @song.illustration? %>
-  <strong>Illustration:</strong>
-  <%= @song.illustration %>
-  <% end %>
-</p>
-
-<p>
-  <% if @song.pv_director? %>
-  <strong>Director:</strong>
-  <%= @song.pv_director %>
-  <% end %>
-</p>
-
-<p>
-  <% if @song.itunes_url? %>
-  <strong>This song is sold on <%= link_to 'itunes', @song.itunes_url , :target=>["_blank"] %></strong>
-  <% end %>
-
-</p>
-
+<div class="container-fluid">
+  <div class="col-sm-10 col-sm-offset-1">
+    <div class="row">
+      <div class="col-sm-2">
+        <%= render 'songs/sidebar' %>
+      </div>
+      <div class="container_bg img-rounded col-sm-9">
+        <%= render 'songs/result' %>
+      </div>
+    </div>
   </div>
 </div>
-
-  </div>
-</div>
-</div>  
