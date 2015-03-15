@@ -1,65 +1,13 @@
 <% provide(:title, 'Shows') %>
-<div class="container">
- <div class="row-fluid">
- <div class="sidebar container_bg span3 img-rounded">
-  <%= render 'shows/sidebar' %>
- </div>
- 
- <div class="content container_bg span9 img-rounded">
-<p>
-  <h1>
-    <%= @show.title %>
-  </h1>
-</p>
 
-  <div class="span4" style="margin : 10px">
-      
-         <%= image_tag @show.img_url if @show.img_url %>
-  </div>
-  <div class="span4">
-<p>
-  <strong>Official title:</strong>
-  <%= @show.official_title %>
-</p>
-
-<p>
-  <% if @show.offical_url? %>
-  <strong>Offical webpage:  </strong>
-  <%= link_to @show.offical_url, @show.offical_url , :target=>["_blank"]%>
-  <% end %>
-</p>
-
-<p>
-  <% if @show.sponser_url? %>
-  <strong>Sponser:  </strong>
-  <%= link_to @show.sponser, @show.sponser_url, :target=>["_blank"]%>
-  <% end %>
-</p>
-
-<p>
-  <% if @show.broadcasting_station? %>
- <strong>Broadcasting station:</strong>
-  <%= @show.broadcasting_station %>
-  <% end %>
-</p>
-
-
-<p>
-  <% if @show.broadcasting_period? %>
- <strong>Broadcasting period:</strong>
-  <%= @show.broadcasting_period %>
-  <% end %>
-</p>
-  </div>
-
-
-<div class="span8">
-<p>
-  <% if @show.youtube_id? %>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @show.youtube_id %>" frameborder="0" allowfullscreen></iframe>
-  <% end %>
-</p>
-
+  <div class="col-sm-10 col-sm-offset-1">
+    <div class="row">
+      <div class="col-sm-2">
+        <%= render 'shows/sidebar' %>
+      </div>
+      <div class="container_bg img-rounded col-sm-9">
+        <%= render 'shows/result' %>
+      </div>
+    </div>
   </div>
 </div>
-</div>  
