@@ -1,0 +1,41 @@
+.container-fluid
+  .row
+    p
+
+    h1
+      = @show.title
+    .col-sm-4
+      .img-responsive
+        = image_tag @show.img_url if @show.img_url
+    .col-sm-7.col-sm-offset-1
+      p
+        strong
+          | Official title:
+        = @show.official_title
+      p
+        - if @show.offical_url?
+          strong
+            | Offical webpage: 
+          = link_to @show.offical_url, @show.offical_url , :target=>["_blank"]
+      p
+        - if @show.sponser_url?
+          strong
+            | Sponser: 
+          = link_to @show.sponser, @show.sponser_url, :target=>["_blank"]
+      p
+        - if @show.broadcasting_station?
+          strong
+            | Broadcasting station:
+          = @show.broadcasting_station
+      p
+        - if @show.broadcasting_period?
+          strong
+            | Broadcasting period:
+          = @show.broadcasting_period
+    .row
+      .col-sm-12
+        p
+          - if @show.youtube_id?
+            |  <iframe width="560" height="315" src="https://www.youtube.com/embed/
+            = @show.youtube_id
+            | " frameborder="0" allowfullscreen>

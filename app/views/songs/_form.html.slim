@@ -1,0 +1,48 @@
+= form_for(@song) do |f|
+  - if @song.errors.any?
+    #error_explanation
+      h2
+        = pluralize(@song.errors.count, "error")
+        |  prohibited this song from being saved:
+      ul
+        - @song.errors.full_messages.each do |message|
+          li
+            = message
+  .field
+    = f.label :title
+    br
+    = f.text_field :title
+  .field
+    = f.label :music
+    br
+    = f.text_field :music
+  .field
+    = f.label :music_url
+    br
+    = f.text_field :music_url
+  .field
+    = f.label :lyrics
+    br
+    = f.text_field :lyrics
+  .field
+    = f.label :singer
+    br
+    = f.text_field :singer
+  .field
+    = f.label :illustration
+    br
+    = f.text_field :illustration
+  .field
+    = f.label :pv_director
+    br
+    = f.text_field :pv_director
+  .field
+    = f.label :youtube_id
+    br
+    = f.text_field :youtube_id
+  .field
+    = f.label :itunes_url
+    br
+    = f.text_field :itunes_url
+  .actions
+    = f.submit
