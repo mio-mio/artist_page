@@ -1,0 +1,51 @@
+<div class="container-fluid">
++  <p>
++    <h1>
++      <%= @song.title %>
++    </h1>
++  </p>
++  <div class="row">
++    <div class="col-sm-7">
++      <div class="video-wrap">
++        <p>
++          <% if @song.youtube_id? %>
++          <iframe src="https://www.youtube.com/embed/<%= @song.youtube_id %>" frameborder="0" allowfullscreen></iframe>
++          <% end %>
++        </p>
++      </div>
++    </div>
++    <div class="col-sm-4">
++      <p>
++        <strong>Music:</strong>
++        <%= link_to @song.music, @song.music_url, :target=>["_blank"] %>
++      </p>
++      <p>
++        <strong>Lyrics:</strong>
++        <%= @song.lyrics %>
++      </p>
++      <p>
++        <strong>Singer:</strong>
++        <%= @song.singer %>
++      </p>
++      <p>
++        <% if @song.illustration? %>
++        <strong>Illustration:</strong>
++        <%= @song.illustration %>
++        <% end %>
++      </p>
++
++      <p>
++        <% if @song.pv_director? %>
++        <strong>Director:</strong>
++        <%= @song.pv_director %>
++        <% end %>
++      </p>
++
++      <p>
++        <% if @song.itunes_url? %>
++        <strong>This song is sold on <%= link_to 'itunes', @song.itunes_url , :target=>["_blank"] %></strong>
++        <% end %>
++      </p>
++    </div>
++  </div>
++</div>
