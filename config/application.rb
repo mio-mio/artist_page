@@ -21,4 +21,10 @@ module MioPage
     # config.i18n.default_locale = :de
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
   end
+  
+  # config/application.rb
+class Application < Rails::Application
+  config.generators.template_engine = :slim
+end
+
 end

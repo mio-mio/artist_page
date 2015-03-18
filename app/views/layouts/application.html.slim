@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title
+      = full_title(yield(:title))
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    script[src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"]
+    script[src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"]
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    = render 'layouts/shiv'
+  body
+    span.bg
+      = render 'layouts/header'
+    = yield

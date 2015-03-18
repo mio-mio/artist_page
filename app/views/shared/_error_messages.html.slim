@@ -1,0 +1,8 @@
+- if @contact.errors.any?
+  .alert.alert-danger[role="alert"]
+    strong
+      | There're any errors!
+    ul
+      - @contact.errors.each do |attr, msg|
+        li
+          = msg
